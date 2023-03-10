@@ -1,0 +1,2 @@
+# JS-exercises
+### School tasks
