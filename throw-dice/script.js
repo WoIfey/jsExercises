@@ -4,7 +4,7 @@ document.getElementById("throw").addEventListener("click", function () {
 
   setTimeout(() => {
     document.getElementById("number").innerText = roll;
-    dice.setAttribute("src", `/throw-dice/dices/${roll}.png`);
+    dice.setAttribute("src", `dices/${roll}.png`);
   }, 1000);
 
   dice.classList = "throw";
