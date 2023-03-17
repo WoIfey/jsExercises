@@ -1,5 +1,5 @@
 document.querySelector("#cButton").addEventListener("click", function () {
-  const cInput = document.querySelector("#celcius").value;
+  const cInput = document.querySelector("#celsius").value;
   const fahrenheit = (cInput * 9) / 5 + 32;
 
   document.querySelector(
