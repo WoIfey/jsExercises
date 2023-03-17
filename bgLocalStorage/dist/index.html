@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Save Background</title>
+  <script type="module" crossorigin src="/bgLocalStorage/assets/index-5c861ca7.js"></script>
+  <link rel="stylesheet" href="/bgLocalStorage/assets/index-2adf0441.css">
+</head>
+
+<body>
+  <div class="h-screen flex flex-col justify-center items-center">
+    <p id="red" class="text-red-500 bg-red-100 rounded-xl px-2 m-2">Red (255)</p>
+    <input id="redInput" type="range" min="0" max="255" value="255" class="accent-red-700 w-[200px]">
+    <p id="green" class="text-green-500 bg-green-100 rounded-xl px-2 m-2">Green (255)</p>
+    <input id="greenInput" type="range" min="0" max="255" value="255" class="accent-green-700 w-[200px]">
+    <p id="blue" class="text-blue-500 bg-blue-100 rounded-xl px-2 m-2">Blue (255)</p>
+    <input id="blueInput" type="range" min="0" max="255" value="255" class="accent-blue-700 w-[200px]">
+    <p id="rgbInput" class="bg-slate-300 rounded-xl py-1 px-2 mt-3"></p>
+    <button id="saveColor" class="bg-slate-600 rounded-xl mt-3 px-3 py-1 w-28 text-white hover:bg-slate-700">Save Color</button>
+  </div>
+  <div id="cookieTray" class="hidden absolute bg-slate-600 w-full h-20 bottom-0">
+    <div class="p-3">
+      <p class="text-white">This site uses cookies to save your colored background</p>
+      <button id="cookies" class="bg-white rounded-xl px-2 py-1 hover:bg-slate-200">Accept</button>
+    </div>
+  </div>
+  
+</body>
+
+</html>

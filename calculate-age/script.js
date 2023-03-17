@@ -14,6 +14,8 @@ function ageCalculator() {
   const day = date.getDate();
 
   let age = yearNow - year;
+  let ageMonth = monthNow - month;
+  let ageDay = dayNow - day;
 
   if (monthNow < month || (monthNow == month && dayNow < day)) {
     age--;
@@ -22,6 +24,6 @@ function ageCalculator() {
   if (dateInput.value == null || dateInput.value == "") {
     result.innerText = "Insert a valid date.";
   } else {
-    result.innerText = `You are ${age} years old.`;
+    result.innerText = `You are ${age} years, ${ageMonth} months and ${ageDay} days old.`;
   }
 }
