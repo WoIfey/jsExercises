@@ -3,7 +3,7 @@ document.querySelector("#cButton").addEventListener("click", function () {
   const fahrenheit = (cInput * 9) / 5 + 32;
 
   document.querySelector(
-    "h1"
+    "h2"
   ).innerText = `${cInput}°C is equal to ${fahrenheit}°F`;
 });
 
@@ -12,6 +12,6 @@ document.querySelector("#fButton").addEventListener("click", function () {
   const celsius = ((fInput - 32) * 5) / 9;
 
   document.querySelector(
-    "h1"
+    "h2"
   ).innerText = `${fInput}°F is equal to ${celsius}°C`;
 });
