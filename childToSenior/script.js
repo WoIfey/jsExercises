@@ -21,6 +21,8 @@ function calculateAge() {
 
   if (dateInput.value == null || dateInput.value == "") {
     result.innerText = "Insert a valid date.";
+  } else if (age < 0) {
+    result.innerText = `You aren't even born! (${age})`;
   } else if (age < 13) {
     result.innerText = `You are a child. (${age})`;
   } else if (age < 20) {
@@ -29,5 +31,7 @@ function calculateAge() {
     result.innerText = `You are an adult. (${age})`;
   } else if (age < 101) {
     result.innerText = `You are a senior. (${age})`;
+  } else {
+    result.innerText = `Are you even alive?! (${age})`;
   }
 }
