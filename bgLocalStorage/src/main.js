@@ -5,18 +5,9 @@ const greenInput = document.getElementById("greenInput");
 const blueInput = document.getElementById("blueInput");
 const rgbInput = document.getElementById("rgbInput");
 const saveBtn = document.getElementById("saveColor");
-const redTxt = document.getElementById("red")
-const greenTxt = document.getElementById("green")
-const blueTxt = document.getElementById("blue")
-const cookieTray = document.querySelector("#cookieTray")
-
-if (document.cookie == "") {
-  cookieTray.style.display = "initial"
-}
-document.querySelector("#cookies").addEventListener("click", function () {
-  cookieTray.style.display = "none"
-  document.cookie = "cookies=accepted";
-})
+const redTxt = document.getElementById("red");
+const greenTxt = document.getElementById("green");
+const blueTxt = document.getElementById("blue");
 
 function changeColor() {
   let red = redInput.value;
@@ -53,9 +44,9 @@ if (window.localStorage.length === 0) {
   blueInput.value = savedBlue;
   document.body.style.backgroundColor = savedColor;
   rgbInput.innerText = savedColor;
-  redTxt.innerText = "Red (" + savedRed + ")"
-  greenTxt.innerText = "Green (" + savedGreen + ")"
-  blueTxt.innerText = "Blue (" + savedBlue + ")"
+  redTxt.innerText = "Red (" + savedRed + ")";
+  greenTxt.innerText = "Green (" + savedGreen + ")";
+  blueTxt.innerText = "Blue (" + savedBlue + ")";
 }
 
 redInput.addEventListener("input", changeColor);
