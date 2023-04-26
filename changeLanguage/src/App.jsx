@@ -24,9 +24,34 @@ const App = () => {
     }
   };
 
+  const LanguageText = () => {
+    switch (language) {
+      case "fi":
+        return {
+          fi: "Suomi",
+          sv: "Ruotsi",
+          en: "Englanti",
+        };
+      case "sv":
+        return {
+          fi: "Finska",
+          sv: "Svenska",
+          en: "Engelska",
+        };
+      case "en":
+      default:
+        return {
+          fi: "Finnish",
+          sv: "Swedish",
+          en: "English",
+        };
+    }
+  };
+
   return (
     <div className="flex flex-col text-center justify-center items-center h-screen text-xl">
-      <div className="bg-slate-200 px-4 py-2 rounded-xl m-4">{Text()}</div>
+      <p>Selected Language: {language}</p>
+      <p className="bg-slate-200 px-4 py-2 rounded-xl m-4">{Text()}</p>
       <div className="flex select-none">
         <div onClick={() => Language("fi")}>
           <img
@@ -34,7 +59,7 @@ const App = () => {
             alt="Finnish"
             className="w-52 h-32 mx-4 my-3 cursor-pointer rounded-xl drop-shadow-lg hover:drop-shadow-2xl transition duration-300 ease-in-out"
           />
-          <p>Finnish</p>
+          <p>{LanguageText().fi}</p>
         </div>
         <div onClick={() => Language("sv")}>
           <img
@@ -42,7 +67,7 @@ const App = () => {
             alt="Swedish"
             className="w-52 h-32 mx-4 my-3 cursor-pointer rounded-xl drop-shadow-lg hover:drop-shadow-2xl transition duration-300 ease-in-out"
           />
-          <p>Swedish</p>
+          <p>{LanguageText().sv}</p>
         </div>
         <div onClick={() => Language("en")}>
           <img
@@ -50,7 +75,7 @@ const App = () => {
             alt="English"
             className="w-52 h-32 mx-4 my-3 cursor-pointer rounded-xl drop-shadow-lg hover:drop-shadow-2xl transition duration-300 ease-in-out"
           />
-          <p>English</p>
+          <p>{LanguageText().en}</p>
         </div>
       </div>
     </div>
