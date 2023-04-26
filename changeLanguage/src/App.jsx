@@ -30,7 +30,7 @@ const App = () => {
       <div className="flex select-none">
         <div onClick={() => Language("fi")}>
           <img
-            src="/fi.webp"
+            src="fi.webp"
             alt="Finnish"
             className="w-52 h-32 mx-4 my-3 cursor-pointer rounded-xl drop-shadow-lg hover:drop-shadow-2xl transition duration-300 ease-in-out"
           />
@@ -38,7 +38,7 @@ const App = () => {
         </div>
         <div onClick={() => Language("sv")}>
           <img
-            src="/se.webp"
+            src="se.webp"
             alt="Swedish"
             className="w-52 h-32 mx-4 my-3 cursor-pointer rounded-xl drop-shadow-lg hover:drop-shadow-2xl transition duration-300 ease-in-out"
           />
@@ -46,7 +46,7 @@ const App = () => {
         </div>
         <div onClick={() => Language("en")}>
           <img
-            src="/gb.webp"
+            src="gb.webp"
             alt="English"
             className="w-52 h-32 mx-4 my-3 cursor-pointer rounded-xl drop-shadow-lg hover:drop-shadow-2xl transition duration-300 ease-in-out"
           />
