@@ -9,7 +9,7 @@ date.addEventListener("change", () => {
   } else if (result.years < 0) {
     age.innerText = `You aren't even born! (${result.years}) 😮`;
   } else if (result.years < 13) {
-    age.innerText = `You are a child. $(${result.years}) 👶`;
+    age.innerText = `You are a child. (${result.years}) 👶`;
   } else if (result.years < 20) {
     age.innerText = `You are a teenager. (${result.years}) 🧑‍🎓`;
   } else if (result.years < 65) {
