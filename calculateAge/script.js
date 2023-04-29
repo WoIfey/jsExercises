@@ -1,11 +1,17 @@
-const inputElement = document.querySelector("#date");
-const divElement = document.querySelector("#result");
+const date = document.querySelector("#date");
+const age = document.querySelector("#result");
 
-inputElement.addEventListener("change", () => {
-  const result = computeAge(inputElement.value);
-  divElement.innerHTML = `
-    ${result.years} years and ${result.days} days old
-  `;
+date.addEventListener("change", () => {
+  const result = computeAge(date.value);
+  if (!date.value) {
+    age.innerText = "Insert a valid date.";
+  } else {
+    const { years, days } = result;
+    let message = `${years} ${years === 1 ? "year" : "years"} and ${days} ${
+      days === 1 ? "day" : "days"
+    } old`;
+    age.innerText = message;
+  }
 });
 
 /**
