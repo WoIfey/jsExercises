@@ -10,18 +10,16 @@
 </head>
 
 <body>
-    <div>
-        <h1>Celsius to Fahrenheit Calculator</h1>
-        <h2></h2>
-        <h3>°C
-            <input id="celsius" type="number" value="0">
-            <button id="cButton" type="submit">Submit</button>
-        </h3>
-        <h3>°F
-            <input id="fahrenheit" type="number" value="32">
-            <button id="fButton" type="submit">Submit</button>
-        </h3>
-    </div>
+    <main>
+        <div>
+            <p>Celsius (°C)</p>
+            <input type="number" id="celsius" oninput="celToFar()" value="0">
+        </div>
+        <div>
+            <p>Fahrenheit (°F)</p>
+            <input type="number" id="fahrenheit" oninput="fahToCel()" value="32">
+        </div>
+    </main>
 
     <script src="script.js"></script>
 </body>

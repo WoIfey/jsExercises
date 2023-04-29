@@ -1,29 +1,48 @@
-function ageCalculator() {
-  const result = document.getElementById("result");
-  const dateInput = document.getElementById("date");
+const inputElement = document.querySelector("#date");
+const divElement = document.querySelector("#result");
 
-  const date = new Date(dateInput.value);
+inputElement.addEventListener("change", () => {
+  const result = computeAge(inputElement.value);
+  divElement.innerHTML = `
+    ${result.years} years and ${result.days} days old
+  `;
+});
+
+/**
+ * @param {string} dateOfBirth
+ * @returns {{years: number, days: number}}
+ */
+function computeAge(dateOfBirth) {
   const now = new Date();
+  const birtdate = new Date(dateOfBirth);
 
-  const yearNow = now.getFullYear();
-  const monthNow = now.getMonth();
-  const dayNow = now.getDate();
+  if (
+    now.getMonth() > birtdate.getMonth() ||
+    (now.getMonth() === birtdate.getMonth() &&
+      now.getDate() >= birtdate.getDate())
+  ) {
+    const thisYearBirtDate = new Date(
+      `${now.getFullYear()}-${birtdate.getMonth() + 1}-${birtdate.getDate()}`
+    );
 
-  const year = date.getFullYear();
-  const month = date.getMonth();
-  const day = date.getDate();
-
-  let age = yearNow - year;
-
-  if (monthNow < month || (monthNow == month && dayNow < day)) {
-    age--;
-  }
-
-  if (dateInput.value == null || dateInput.value == "") {
-    result.innerText = "Insert a valid date.";
-  } else if (age == 1) {
-    result.innerText = `You are ${age} year old`;
+    return {
+      years: now.getFullYear() - birtdate.getFullYear(),
+      days: Math.floor(
+        (now.getTime() - thisYearBirtDate.getTime()) / (1000 * 60 * 60 * 24)
+      ),
+    };
   } else {
-    result.innerText = `You are ${age} years old`;
+    const lastYearBirtDate = new Date(
+      `${now.getFullYear() - 1}-${
+        birtdate.getMonth() + 1
+      }-${birtdate.getDate()}`
+    );
+
+    return {
+      years: now.getFullYear() - birtdate.getFullYear() - 1,
+      days: Math.floor(
+        (now.getTime() - lastYearBirtDate.getTime()) / (1000 * 60 * 60 * 24)
+      ),
+    };
   }
 }

@@ -1,37 +1,61 @@
-function calculateAge() {
-  const result = document.getElementById("result");
-  const dateInput = document.getElementById("date");
+const inputElement = document.querySelector("#date");
+const divElement = document.querySelector("#result");
 
-  const date = new Date(dateInput.value);
-  const now = new Date();
+inputElement.addEventListener("change", () => {
+  const result = computeAge(inputElement.value);
 
-  const yearNow = now.getFullYear();
-  const monthNow = now.getMonth();
-  const dayNow = now.getDate();
-
-  const year = date.getFullYear();
-  const month = date.getMonth();
-  const day = date.getDate();
-
-  let age = yearNow - year;
-
-  if (monthNow < month || (monthNow == month && dayNow < day)) {
-    age--;
-  }
-
-  if (dateInput.value == null || dateInput.value == "") {
-    result.innerText = "Insert a valid date.";
-  } else if (age < 0) {
-    result.innerText = `You aren't even born! (${age})`;
-  } else if (age < 13) {
-    result.innerText = `You are a child. (${age})`;
-  } else if (age < 20) {
-    result.innerText = `You are a teenager. (${age})`;
-  } else if (age < 65) {
-    result.innerText = `You are an adult. (${age})`;
-  } else if (age < 101) {
-    result.innerText = `You are a senior. (${age})`;
+  if (inputElement.value == null || inputElement.value == "") {
+    divElement.innerText = "Insert a valid date.";
+  } else if (result.years < 0) {
+    divElement.innerText = `You aren't even born! (${result.years})`;
+  } else if (result.years < 13) {
+    divElement.innerText = `You are a child. (${result.years})`;
+  } else if (result.years < 20) {
+    divElement.innerText = `You are a teenager. (${result.years})`;
+  } else if (result.years < 65) {
+    divElement.innerText = `You are an adult. (${result.years})`;
+  } else if (result.years < 101) {
+    divElement.innerText = `You are a senior. (${result.years})`;
   } else {
-    result.innerText = `Are you even alive?! (${age})`;
+    divElement.innerText = `Are you even alive?! (${result.years})`;
+  }
+});
+
+/**
+ * @param {string} dateOfBirth
+ * @returns {{years: number, days: number}}
+ */
+function computeAge(dateOfBirth) {
+  const now = new Date();
+  const birtdate = new Date(dateOfBirth);
+
+  if (
+    now.getMonth() > birtdate.getMonth() ||
+    (now.getMonth() === birtdate.getMonth() &&
+      now.getDate() >= birtdate.getDate())
+  ) {
+    const thisYearBirtDate = new Date(
+      `${now.getFullYear()}-${birtdate.getMonth() + 1}-${birtdate.getDate()}`
+    );
+
+    return {
+      years: now.getFullYear() - birtdate.getFullYear(),
+      days: Math.floor(
+        (now.getTime() - thisYearBirtDate.getTime()) / (1000 * 60 * 60 * 24)
+      ),
+    };
+  } else {
+    const lastYearBirtDate = new Date(
+      `${now.getFullYear() - 1}-${
+        birtdate.getMonth() + 1
+      }-${birtdate.getDate()}`
+    );
+
+    return {
+      years: now.getFullYear() - birtdate.getFullYear() - 1,
+      days: Math.floor(
+        (now.getTime() - lastYearBirtDate.getTime()) / (1000 * 60 * 60 * 24)
+      ),
+    };
   }
 }

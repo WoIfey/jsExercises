@@ -1,17 +1,12 @@
-document.querySelector("#cButton").addEventListener("click", function () {
-  const cInput = document.querySelector("#celsius").value;
-  const fahrenheit = (cInput * 9) / 5 + 32;
+const celsius = document.getElementById("celsius");
+const fahrenheit = document.getElementById("fahrenheit");
 
-  document.querySelector(
-    "h2"
-  ).innerText = `${cInput}°C is equal to ${fahrenheit}°F`;
-});
+function celToFar() {
+  const output = (celsius.value * 9) / 5 + 32;
+  fahrenheit.value = parseFloat(output.toFixed(2));
+}
 
-document.querySelector("#fButton").addEventListener("click", function () {
-  const fInput = document.querySelector("#fahrenheit").value;
-  const celsius = ((fInput - 32) * 5) / 9;
-
-  document.querySelector(
-    "h2"
-  ).innerText = `${fInput}°F is equal to ${celsius}°C`;
-});
+function fahToCel() {
+  const output = ((fahrenheit.value - 32) * 5) / 9;
+  celsius.value = parseFloat(output.toFixed(2));
+}
