@@ -5,9 +5,9 @@ const App = () => {
 
   return (
     <div className="flex flex-col justify-center items-center h-screen">
-      <div className="p-2">Hover over me!</div>
+      <h1 className="p-2 text-xl">Hover over me!</h1>
       <div
-        className="bg-[#F4D8CD] h-40 w-96 rounded-xl"
+        className="bg-[#b95f3c] text-white h-20 w-96 rounded-xl"
         onMouseEnter={() => setIsShown(true)}
         onMouseLeave={() => setIsShown(false)}
       >
