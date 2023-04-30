@@ -10,11 +10,11 @@ date.addEventListener("change", () => {
     age.innerText = `You aren't even born! (${result.years}) 😮`;
   } else if (result.years < 13) {
     age.innerText = `You are a child. (${result.years}) 👶`;
-  } else if (result.years < 20) {
+  } else if (result.years < 18) {
     age.innerText = `You are a teenager. (${result.years}) 🧑‍🎓`;
-  } else if (result.years < 65) {
+  } else if (result.years < 63) {
     age.innerText = `You are an adult. (${result.years}) 👨‍💼`;
-  } else if (result.years < 101) {
+  } else if (result.years < 121) {
     age.innerText = `You are a senior. (${result.years}) 🧓`;
   } else {
     age.innerText = `Are you even alive?! (${result.years}) 💀`;
@@ -23,7 +23,7 @@ date.addEventListener("change", () => {
 
 /**
  * @param {string} dateOfBirth
- * @returns {{years: number, days: number}}
+ * @returns {{years: number}}
  */
 function computeAge(dateOfBirth) {
   const now = new Date();
@@ -34,28 +34,12 @@ function computeAge(dateOfBirth) {
     (now.getMonth() === birtdate.getMonth() &&
       now.getDate() >= birtdate.getDate())
   ) {
-    const thisYearBirtDate = new Date(
-      `${now.getFullYear()}-${birtdate.getMonth() + 1}-${birtdate.getDate()}`
-    );
-
     return {
       years: now.getFullYear() - birtdate.getFullYear(),
-      days: Math.floor(
-        (now.getTime() - thisYearBirtDate.getTime()) / (1000 * 60 * 60 * 24)
-      ),
     };
   } else {
-    const lastYearBirtDate = new Date(
-      `${now.getFullYear() - 1}-${
-        birtdate.getMonth() + 1
-      }-${birtdate.getDate()}`
-    );
-
     return {
       years: now.getFullYear() - birtdate.getFullYear() - 1,
-      days: Math.floor(
-        (now.getTime() - lastYearBirtDate.getTime()) / (1000 * 60 * 60 * 24)
-      ),
     };
   }
 }
