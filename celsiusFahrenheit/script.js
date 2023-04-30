@@ -1,7 +1,7 @@
 const celsius = document.getElementById("celsius");
 const fahrenheit = document.getElementById("fahrenheit");
 
-function celToFar() {
+function celToFah() {
   const output = (celsius.value * 9) / 5 + 32;
   fahrenheit.value = parseFloat(output.toFixed(2));
 }
