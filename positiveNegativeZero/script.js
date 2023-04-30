@@ -1,4 +1,4 @@
-document.querySelector("button").addEventListener("click", function () {
+document.querySelector("input").addEventListener("change", () => {
   const number = document.querySelector("input").value;
   const text = document.querySelector("h1");
 

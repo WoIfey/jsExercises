@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
 }
 
 div {
@@ -10,5 +11,4 @@ div {
   justify-content: center;
   align-items: center;
   font-size: 45px;
-  font-family: sans-serif;
 }
