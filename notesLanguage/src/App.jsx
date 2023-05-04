@@ -90,7 +90,7 @@ const App = () => {
           inputMode="text"
         />
                 <button
-          className="px-3 py-2 bg-[#2E86AB] rounded-md focus:outline-none"
+          className="px-3 py-1 bg-[#2E86AB] rounded-md focus:outline-none"
           onClick={addNote}
         >
           {Text()}
