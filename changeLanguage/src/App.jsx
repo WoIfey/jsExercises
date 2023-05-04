@@ -48,11 +48,22 @@ const App = () => {
     }
   };
 
+  const SelectedText = () => {
+    switch (language) {
+      case "fi":
+        return "Valittu kieli: 🇫🇮";
+      case "sv":
+        return "Valt språk: 🇸🇪";
+      default:
+        return "Selected Language: 🇬🇧";
+    }
+  };
+
   return (
     <div className="flex flex-col text-center justify-center items-center h-screen text-xl">
-      <p>Selected Language: {language}</p>
+      <p>{SelectedText()}</p>
       <p className="bg-slate-200 px-4 py-2 rounded-xl m-4">{Text()}</p>
-      <div className="flex select-none">
+      <div className="flex select-none flex-col md:flex-row">
         <div onClick={() => Language("fi")}>
           <img
             src="fi.webp"
