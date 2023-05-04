@@ -5,7 +5,7 @@ const App = () => {
     localStorage.getItem("language") || "sv"
   );
   const [notes, setNotes] = useState(
-    JSON.parse(localStorage.getItem("notes")) || []
+    JSON.parse(localStorage.getItem("notesLanguage")) || []
   );
   const [newNote, setNewNote] = useState("");
 
@@ -14,7 +14,7 @@ const App = () => {
   }, [language]);
 
   useEffect(() => {
-    localStorage.setItem("notes", JSON.stringify(notes));
+    localStorage.setItem("notesLanguage", JSON.stringify(notes));
   }, [notes]);
 
   const addNote = () => {
@@ -22,7 +22,7 @@ const App = () => {
       return;
     }
     const id = Math.floor(Math.random() * 1000000);
-    const note = { id, language, content: newNote };
+    const note = { id, language, text: newNote };
     setNotes([...notes, note]);
     setNewNote("");
   };
@@ -34,26 +34,43 @@ const App = () => {
 
   const filteredNotes = notes.filter((note) => note.language === language);
 
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter" && e.target.value.trim() !== "") {
+      addNote();
+    }
+  };
+
+  const Text = () => {
+    switch (language) {
+      case "fi":
+        return "Lisätä huomautus";
+      default:
+        return "Lägg till anteckning";
+    }
+  };
+
   return (
     <div className="flex flex-col justify-center items-center h-screen text-xl bg-[#131615] text-white">
       <select
-        className="w-auto text-xl rounded-md px-3 py-2 bg-[#2E3532]"
+        className="w-auto text-xl rounded-md px-2 py-1 bg-[#2E3532]"
         value={language}
         onChange={(e) => setLanguage(e.target.value)}
       >
         <option value="sv">Svenska</option>
         <option value="fi">Suomi</option>
       </select>
-      <div className="mt-5 w-auto max-h-[300px] rounded-md overflow-y-auto">
+      <div className="mt-2 w-[350px] max-h-[600px] rounded-md overflow-y-auto">
         <main>
           {filteredNotes.map((note) => (
             <div
               key={note.id}
-              className="bg-[#2E3532] rounded-md flex items-center justify-between px-6 my-2 py-2 w-full"
+              className="bg-[#2E3532] rounded-md flex flex-col items-center justify-between px-4 my-3 py-3 w-full"
             >
-              <p className="mr-4 truncate max-w-[250px]">{note.content}</p>
+              <p className="flex justify-start items-start w-full max-h-[100px] truncate whitespace-normal border-b border-white">
+                {note.text}
+              </p>
               <button
-                className="p-1 rounded-md focus:outline-none"
+                className="mt-3 hover:bg-red-400 w-full flex items-center justify-center rounded-md"
                 onClick={() => removeNote(note.id)}
               >
                 <img src="trash-bold.svg" alt="Trash" className="w-6" />
@@ -62,18 +79,21 @@ const App = () => {
           ))}
         </main>
       </div>
-      <div className="mt-5 flex flex-col items-center justify-center">
-        <textarea
-          className="w-full h-20 my-3 p-2 rounded-md bg-[#2E3532] resize-none"
+      <div className="flex flex-col items-center justify-center">
+        <input
+          className="w-[350px] h-auto my-3 p-2 rounded-md bg-[#4b341b] resize-none"
           value={newNote}
-          placeholder="Lägg till text..."
+          placeholder="Text"
           onChange={(e) => setNewNote(e.target.value)}
+          onKeyDown={handleKeyPress}
+          type="text"
+          inputMode="text"
         />
-        <button
+                <button
           className="px-3 py-2 bg-[#2E86AB] rounded-md focus:outline-none"
           onClick={addNote}
         >
-          Lägg till anteckning
+          {Text()}
         </button>
       </div>
     </div>

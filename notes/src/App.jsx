@@ -48,9 +48,16 @@ const App = () => {
     setNotes(updatedNotes);
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter" && e.target.value.trim() !== "") {
+      addNote();
+    }
+  };
+
   return (
     <div className="flex flex-col justify-center items-center h-screen text-xl bg-[#131615] text-white">
-      <div className="w-auto max-h-[600px] rounded-md overflow-y-auto">
+      <p className="mb-2 text-2xl">Notes</p>
+      <div className="w-auto max-h-[500px] rounded-md overflow-y-auto">
         <main>
           {notes.map((note) => (
             <div
@@ -59,14 +66,14 @@ const App = () => {
             >
               <div className="flex flex-col">
                 <input
-                  className="mb-4 truncate max-w-[250px] bg-transparent border-b border-white outline-none focus:border-blue-400"
+                  className="mb-4 truncate max-w-[250px] bg-transparent border-b border-white outline-none focus:border-[#2E86AB]"
                   value={note.title}
                   maxLength={30}
                   placeholder="Title"
                   onChange={(e) => updateNote(note.id, "title", e.target.value)}
                 />
                 <textarea
-                  className="max-w-[300px] h-24 bg-transparent border-b border-white outline-none focus:border-blue-400 resize-none"
+                  className="max-w-[300px] h-auto bg-transparent border-b border-white outline-none focus:border-[#2E86AB]"
                   value={note.content}
                   placeholder="Text"
                   onChange={(e) =>
@@ -74,7 +81,9 @@ const App = () => {
                   }
                 />
                 <div className="flex justify-between items-center">
-                  <p className="text-gray-400 mt-2 text-sm">{note.timeAdded}</p>
+                  <p className="text-gray-400 mt-2 text-sm truncate max-w-[200px]">
+                    {note.timeAdded}
+                  </p>
                   <button onClick={() => removeNote(note.id)} className="mt-2">
                     <div className="hover:bg-red-400 rounded-md">
                       <img src="trash-bold.svg" alt="Trash" className="w-5" />
@@ -88,19 +97,22 @@ const App = () => {
       </div>
       <div className="mt-5 flex flex-col items-center justify-center">
         <input
-          className="w-full my-3 p-2 rounded-md bg-[#2E3532] text-white outline-none focus:border-blue-400"
+          className="w-full my-3 p-2 rounded-md bg-[#2E3532] text-white outline-none focus:border-[#2E86AB]"
           value={newNote.title}
           placeholder="Title"
           onChange={(e) => setNewNote({ ...newNote, title: e.target.value })}
         />
         <textarea
-          className="w-full h-20 p-2 rounded-md bg-[#2E3532] text-white resize-none outline-none focus:border-blue-400"
+          className="w-full h-20 p-2 rounded-md bg-[#2E3532] text-white resize-none outline-none focus:border-[#2E86AB]"
           value={newNote.content}
           placeholder="Text"
           onChange={(e) => setNewNote({ ...newNote, content: e.target.value })}
+          onKeyUp={handleKeyPress}
+          type="text"
+          inputMode="text"
         />
         <button
-          className="px-3 py-2 my-3 bg-[#2E86AB] rounded-md focus:outline-none"
+          className="px-3 py-1 my-3 bg-[#2E86AB] rounded-md focus:outline-none"
           onClick={addNote}
         >
           Add Note
