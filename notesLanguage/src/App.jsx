@@ -35,25 +35,25 @@ const App = () => {
   const filteredNotes = notes.filter((note) => note.language === language);
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen text-xl bg-slate-600 text-white">
+    <div className="flex flex-col justify-center items-center h-screen text-xl bg-[#131615] text-white">
       <select
-        className="w-auto text-xl rounded-xl px-3 py-2 bg-[#0E103D]"
+        className="w-auto text-xl rounded-md px-3 py-2 bg-[#2E3532]"
         value={language}
         onChange={(e) => setLanguage(e.target.value)}
       >
         <option value="sv">Svenska</option>
         <option value="fi">Suomi</option>
       </select>
-      <div className="mt-5 w-auto max-h-[300px] rounded-xl overflow-y-auto">
+      <div className="mt-5 w-auto max-h-[300px] rounded-md overflow-y-auto">
         <main>
           {filteredNotes.map((note) => (
             <div
               key={note.id}
-              className="bg-[#0E103D] rounded-xl flex items-center justify-between px-6 my-2 py-2 w-full"
+              className="bg-[#2E3532] rounded-md flex items-center justify-between px-6 my-2 py-2 w-full"
             >
               <p className="mr-4 truncate max-w-[250px]">{note.content}</p>
               <button
-                className="p-1 rounded-xl focus:outline-none"
+                className="p-1 rounded-md focus:outline-none"
                 onClick={() => removeNote(note.id)}
               >
                 <img src="trash-bold.svg" alt="Trash" className="w-6" />
@@ -64,13 +64,13 @@ const App = () => {
       </div>
       <div className="mt-5 flex flex-col items-center justify-center">
         <textarea
-          className="w-full h-20 my-3 p-2 rounded-xl bg-[#0E103D] resize-none"
+          className="w-full h-20 my-3 p-2 rounded-md bg-[#2E3532] resize-none"
           value={newNote}
           placeholder="Lägg till text..."
           onChange={(e) => setNewNote(e.target.value)}
         />
         <button
-          className="px-3 py-2 bg-blue-900 rounded-xl focus:outline-none"
+          className="px-3 py-2 bg-[#2E86AB] rounded-md focus:outline-none"
           onClick={addNote}
         >
           Lägg till anteckning
