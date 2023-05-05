@@ -2,33 +2,33 @@ import { useState, useEffect } from "react";
 
 const App = () => {
   const [count, setCount] = useState(
-    parseInt(localStorage.getItem("counter")) || 0
+    parseInt(localStorage.getItem("count")) || 0
   );
 
   useEffect(() => {
-    localStorage.setItem("counter", count);
+    localStorage.setItem("count", count);
   }, [count]);
 
-  function Addition() {
+  const Addition = () => {
     setCount(count + 1);
-  }
+  };
 
-  function Subtraction() {
+  const Subtract = () => {
     setCount(count - 1);
-  }
+  };
 
   return (
-    <main className="flex flex-col justify-center items-center h-screen text-3xl bg-[#131615] text-white">
-      <h1 className="text-4xl mb-2">Counter: {count}</h1>
+    <main className="flex flex-col justify-center items-center h-screen text-2xl bg-[#131615] text-white">
+      <h1 className="text-4xl mb-4">{count}</h1>
       <div>
         <button
-          className="m-3 bg-red-600 px-4 py-2 rounded-md hover:bg-red-700 active:bg-red-600"
-          onClick={Subtraction}
+          className="bg-red-600 px-4 py-1 rounded-l-md hover:bg-red-700 active:bg-red-600"
+          onClick={Subtract}
         >
           Remove
         </button>
         <button
-          className="m-3 bg-green-600 px-4 py-2 rounded-md hover:bg-green-700 active:bg-green-600"
+          className="bg-green-600 px-4 py-1 rounded-r-md hover:bg-green-700 active:bg-green-600"
           onClick={Addition}
         >
           Add
