@@ -1,7 +1,7 @@
 const App = () => {
   return (
     <main className="text-xl">
-      <nav className="bg-[#b8b8b8] fixed top-0 w-full z-10">
+      <nav className="bg-[#b8b8b8] w-full z-10">
         <div className="flex items-center justify-between p-4 px-6">
           <a href="#" className="flex items-center">
             <img src="circle.png" className="w-14 h-14 ml-3" alt="Logo" />
@@ -62,7 +62,7 @@ const App = () => {
         </div>
       </section>
 
-      <footer className="bg-[#eaeaea] mt-20">
+      <footer className="bg-[#eaeaea] mt-28">
         <div className="flex justify-between items-center px-20 py-7">
           <div className="flex">
             <a
