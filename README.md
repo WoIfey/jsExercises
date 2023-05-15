@@ -11,8 +11,10 @@
 - <a href="https://woifey.github.io/jsExercises/countdownTo10/" target="_blank">Countdown to 10</a>
 - <a href="https://woifey.github.io/jsExercises/counter/dist/" target="_blank">Counter</a>
 - <a href="https://woifey.github.io/jsExercises/fetchData/dist/" target="_blank">Fetch Data (NOT PUBLIC)</a>
+- <a href="https://woifey.github.io/jsExercises/hackaton1/dist/" target="_blank">Hackaton 1</a>
 - <a href="https://woifey.github.io/jsExercises/notes/dist/" target="_blank">Notes</a>
 - <a href="https://woifey.github.io/jsExercises/notesLanguage/dist/" target="_blank">Notes Language</a>
 - <a href="https://woifey.github.io/jsExercises/positiveNegativeZero/" target="_blank">Positive Negative Zero</a>
 - <a href="https://woifey.github.io/jsExercises/rockPaperScissors/dist/" target="_blank">Rock Paper Scissors</a>
+- <a href="https://woifey.github.io/jsExercises/tailwindTask/dist/" target="_blank">Tailwind Template</a>
 - <a href="https://woifey.github.io/jsExercises/throwDice/" target="_blank">Throw Dice</a>
