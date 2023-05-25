@@ -8,9 +8,9 @@ const Navbar = () => {
         </div>
       </div>
       <ul className="flex gap-3 p-3 list-none text-xl text-slate-100 cursor-pointer">
-        <CustomLink to="/home">Home</CustomLink>
-        <CustomLink to="/profile">Profile</CustomLink>
-        <CustomLink to="/about">About</CustomLink>
+        <CustomLink to="home">Home</CustomLink>
+        <CustomLink to="profile">Profile</CustomLink>
+        <CustomLink to="about">About</CustomLink>
       </ul>
     </nav>
   );
