@@ -30,7 +30,7 @@ const Home = () => {
 
         <div className="min-h-screen w-full gap-4 items-center justify-center flex flex-wrap max-sm:flex-col">
           <div className="max-sm:w-full z-20 h-[55vh] w-[20%]">
-            <div className="bg-cover rounded-md shadow-lg w-full h-full text-center flex justify-between flex-col p-5 bg-[url('1.jpg')]">
+            <div className="bg-cover rounded-md shadow-lg w-full h-full text-center flex justify-between flex-col p-5 bg-[url('public/1.jpg')]">
               <p className="text-3xl text-amber-50 font-bold">Nightshade</p>
               <p className="text-amber-50 font-bold">
                 NightShade is a fierce warrior, known for her agility and
@@ -47,7 +47,7 @@ const Home = () => {
             </div>
           </div>
           <div className="max-sm:w-full z-20 h-[55vh] w-[20%]">
-            <div className="bg-cover rounded-md shadow-lg w-full h-full text-center flex justify-between flex-col p-5 bg-[url('2.jpg')]">
+            <div className="bg-cover rounded-md shadow-lg w-full h-full text-center flex justify-between flex-col p-5 bg-[url('/2.jpg')]">
               <p className="text-3xl text-amber-50 font-bold">Warcry</p>
               <p className="text-amber-50 font-bold">
                 Warcry is a fearsome knight who has risen from the dead to
@@ -65,7 +65,7 @@ const Home = () => {
             </div>
           </div>
           <div className="max-sm:w-full z-20 h-[55vh] w-[20%]">
-            <div className="bg-cover rounded-md shadow-lg w-full h-full text-center flex justify-between flex-col p-5 bg-[url('3.jpg')]">
+            <div className="bg-cover rounded-md shadow-lg w-full h-full text-center flex justify-between flex-col p-5 bg-[url('/3.jpg')]">
               <p className="text-3xl text-amber-50 font-bold">Grimshadow</p>
               <p className="text-amber-50 font-bold">
                 GrimShadow is a powerful and solitary dark witch, feared for her
@@ -81,7 +81,7 @@ const Home = () => {
             </div>
           </div>
           <div className="max-sm:w-full z-20 h-[55vh] w-[20%]">
-            <div className="bg-cover rounded-md shadow-lg w-full h-full text-center flex justify-between flex-col p-5 bg-[url('4.webp')]">
+            <div className="bg-cover rounded-md shadow-lg w-full h-full text-center flex justify-between flex-col p-5 bg-[url('/4.webp')]">
               <p className="text-3xl text-amber-50 font-bold">Shadowstrike</p>
               <p className="text-amber-50 font-bold">
                 Shadowstrike is a deadly assassin with a reputation for being
@@ -100,7 +100,7 @@ const Home = () => {
             </div>
           </div>
           <div className="max-sm:w-full z-20 h-[55vh] w-[20%]">
-            <div className="bg-cover rounded-md shadow-lg w-full h-full text-center flex justify-between flex-col p-5 bg-[url('5.webp')]">
+            <div className="bg-cover rounded-md shadow-lg w-full h-full text-center flex justify-between flex-col p-5 bg-[url('/5.webp')]">
               <p className="text-3xl text-amber-50 font-bold">Deathwhisper</p>
               <p className="text-amber-50 font-bold">
                 Deathwhisper is a mysterious and formidable soldier, with a
@@ -118,7 +118,7 @@ const Home = () => {
             </div>
           </div>
           <div className="max-sm:w-full z-20 h-[55vh] w-[20%]">
-            <div className="bg-cover rounded-md shadow-lg w-full h-full text-center flex justify-between flex-col p-5 bg-[url('6.jpg')]">
+            <div className="bg-cover rounded-md shadow-lg w-full h-full text-center flex justify-between flex-col p-5 bg-[url('/6.jpg')]">
               <p className="text-3xl text-amber-50 font-bold">Bloodrage</p>
               <p className="text-amber-50 font-bold">
                 Bloodrage is a deadly fighter with a deceivingly cute exterior.
@@ -138,7 +138,7 @@ const Home = () => {
             </div>
           </div>
           <div className="max-sm:w-full z-20 h-[55vh] w-[20%]">
-            <div className="bg-cover rounded-md shadow-lg w-full h-full text-center flex justify-between flex-col p-5 bg-[url('7.jpg')]">
+            <div className="bg-cover rounded-md shadow-lg w-full h-full text-center flex justify-between flex-col p-5 bg-[url('/7.jpg')]">
               <p className="text-3xl text-amber-50 font-bold">Shadowclaw</p>
               <p className="text-amber-50 font-bold">
                 Shadowclaw is a formidable creature, a hybrid of man and tiger
@@ -158,7 +158,7 @@ const Home = () => {
             </div>
           </div>
           <div className="max-sm:w-full z-20 h-[55vh] w-[20%]">
-            <div className="bg-cover rounded-md shadow-lg w-full h-full text-center flex justify-between flex-col p-5 bg-[url('8.jpg')]">
+            <div className="bg-cover rounded-md shadow-lg w-full h-full text-center flex justify-between flex-col p-5 bg-[url('/8.jpg')]">
               <p className="text-3xl text-amber-50 font-bold">Darkfire</p>
               <p className="text-amber-50 font-bold">
                 Darkfire is a blood magician of immense power and darkness. She
