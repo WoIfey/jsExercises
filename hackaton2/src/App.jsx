@@ -23,9 +23,9 @@ const App = () => {
       <div>
         <Routes>
           <Route path="/jsExercises/hackaton2/dist/" element={<Home />} />
-          <Route path="/jsExercises/hackaton2/dist/home" element={<Home />} />
-          <Route path="/jsExercises/hackaton2/dist/profile" element={<Profile />} />
-          <Route path="/jsExercises/hackaton2/dist/about" element={<About />} />
+          <Route path="/jsExercises/hackaton2/dist/home/" element={<Home />} />
+          <Route path="/jsExercises/hackaton2/dist/profile/" element={<Profile />} />
+          <Route path="/jsExercises/hackaton2/dist/about/" element={<About />} />
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/profile" element={<Profile />} />

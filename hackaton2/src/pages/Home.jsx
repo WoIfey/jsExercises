@@ -30,7 +30,7 @@ const Home = () => {
 
         <div className="min-h-screen w-full gap-4 items-center justify-center flex flex-wrap max-sm:flex-col">
           <div className="max-sm:w-full z-20 h-[55vh] w-[20%]">
-            <div className="bg-cover rounded-md shadow-lg w-full h-full text-center flex justify-between flex-col p-5 bg-[url('public/1.jpg')]">
+            <div className="bg-cover rounded-md shadow-lg w-full h-full text-center flex justify-between flex-col p-5 bg-[url('1.jpg')]">
               <p className="text-3xl text-amber-50 font-bold">Nightshade</p>
               <p className="text-amber-50 font-bold">
                 NightShade is a fierce warrior, known for her agility and
@@ -47,7 +47,7 @@ const Home = () => {
             </div>
           </div>
           <div className="max-sm:w-full z-20 h-[55vh] w-[20%]">
-            <div className="bg-cover rounded-md shadow-lg w-full h-full text-center flex justify-between flex-col p-5 bg-[url('/2.jpg')]">
+            <div className="bg-cover rounded-md shadow-lg w-full h-full text-center flex justify-between flex-col p-5 bg-[url('2.jpg')]">
               <p className="text-3xl text-amber-50 font-bold">Warcry</p>
               <p className="text-amber-50 font-bold">
                 Warcry is a fearsome knight who has risen from the dead to
