@@ -12,6 +12,7 @@
 - <a href="https://woifey.github.io/jsExercises/counter/dist/" target="_blank">Counter</a>
 - <a href="https://woifey.github.io/jsExercises/fetchData/dist/" target="_blank">Fetch Data (NOT PUBLIC)</a>
 - <a href="https://woifey.github.io/jsExercises/hackaton1/dist/" target="_blank">Hackaton 1</a>
+- <a href="https://woifey.github.io/jsExercises/hackaton2/dist/" target="_blank">Hackaton 2</a>
 - <a href="https://woifey.github.io/jsExercises/notes/dist/" target="_blank">Notes</a>
 - <a href="https://woifey.github.io/jsExercises/notesLanguage/dist/" target="_blank">Notes Language</a>
 - <a href="https://woifey.github.io/jsExercises/positiveNegativeZero/" target="_blank">Positive Negative Zero</a>
