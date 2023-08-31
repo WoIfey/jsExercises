@@ -1,16 +1,16 @@
 {
-  "name": "savedata",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.18.2",
-    "path": "^0.12.7"
-  }
+	"name": "serverproject",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server/index.js",
+	"scripts": {
+		"dev": "nodemon ./server/index.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^4.18.2",
+		"path": "^0.12.7"
+	}
 }
