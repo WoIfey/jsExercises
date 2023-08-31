@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background-color: #292929;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("blob2.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div {
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    width: 250px;
+}
+
+.user,
+.pass {
+    font-size: 15px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.user {
+    margin-top: 15px;
+}
+
+.proceed,
+.login {
+    padding: 10px;
+    min-width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #3474db;
+    border: none;
+    color: white;
+    font-size: 15px;
+}
+
+.proceed {
+    background-color: #3474db;
+}
+
+.login {
+    background-color: #50565a;
+    margin-top: 8px;
+    min-width: 20%;
+    padding: 4px;
+}
+
+a {
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.proceed:hover {
+    background-color: #296ab9;
+}
+
+.login:hover {
+    background-color: #3d4346;
+}
+
+h1 {
+    font-size: 25px;
+}
