@@ -1,0 +1,6 @@
+{
+	"type": "module",
+	"dependencies": {
+		"read-console-input": "^0.1.0"
+	}
+}
