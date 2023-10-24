@@ -3,14 +3,9 @@ import readline from 'read-console-input'
 console.log("=== Räkna ut fakultet ===")
 const num = Number(readline('Skriv in ett tal: '))
 
-function factorialize(num) {
-    if (num < 0) {
-        return -1
-    } else if (num == 0) {
-        return 1
-    } else {
-        return (num * factorialize(num - 1))
-    }
+let value = num
+for (let i = value - 1; i > 1; i--) {
+    value = value * i
 }
 
-console.log(`Fakulteten (n!) av talet ${num} är:`, factorialize(num))
+console.log(`Fakulteten (n!) av talet ${num} är:`, value)
