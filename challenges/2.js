@@ -5,7 +5,7 @@ const num = Number(readline('Skriv in ett tal: '))
 
 let value = num
 for (let i = value - 1; i > 1; i--) {
-    value = value * i
+    value *= i
 }
 
 console.log(`Fakulteten (n!) av talet ${num} är:`, value)
