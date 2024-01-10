@@ -13,6 +13,7 @@
 - <a href="https://woifey.github.io/jsExercises/linksPage/dist/" target="_blank">Links Page</a>
 - <a href="https://woifey.github.io/jsExercises/notes/dist/" target="_blank">Notes</a>
 - <a href="https://woifey.github.io/jsExercises/notesLanguage/dist/" target="_blank">Notes Language</a>
+- <a href="https://woifey.github.io/jsExercises/pokemonSearch/dist/" target="_blank">Pokemon Search</a>
 - <a href="https://woifey.github.io/jsExercises/positiveNegativeZero/" target="_blank">Positive Negative Zero</a>
 - <a href="https://woifey.github.io/jsExercises/rockPaperScissors/dist/" target="_blank">Rock Paper Scissors</a>
 - <a href="https://woifey.github.io/jsExercises/tailwindTask/dist/" target="_blank">Tailwind Template</a>
