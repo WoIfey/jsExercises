@@ -69,7 +69,7 @@ function App() {
             className="p-2 border border-gray-300 rounded text-black uppercase w-44"
           />
           <button type="submit" onClick={fetchPokemon} className="bg-blue-600 text-white px-4 py-2 h-10 rounded hover:bg-blue-800 transition-all flex justify-center items-center gap-1">
-            <img src="/search.svg" alt="" className='size-4' />
+            <img src="search.svg" alt="" className='size-4' />
             <p className={loading ? 'opacity-0' : 'opacity-100'}>Search</p>
             {loading && (
               <div className="flex items-center justify-center absolute ml-5">
