@@ -26,7 +26,7 @@ function App() {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center h-dvh bg-slate-100 dark:bg-[url(bg.jpg)] text-white">
+    <div className="flex flex-col justify-center items-center h-dvh bg-slate-100 dark:bg-slate-800 dark:bg-bg text-white">
       <div className='bg-slate-700 min-w-max w-1/5 h-full flex justify-center items-center flex-col'>
         {error && (
           <div className='bg-slate-800 w-full p-6 mb-4 flex justify-center items-center'>
